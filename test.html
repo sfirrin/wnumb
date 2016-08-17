@@ -164,4 +164,22 @@
 			equal ( Tester.to ( 1058009 ), '1058009m' );
 		});
 
+		test( "Testing round", function(){
+
+			var Tester = wNumb({
+				round: 1000000,
+				decimals: 2,
+				postfix: 'm'
+			});
+
+			equal ( Tester.to(8550405), '8.55m');
+			equal (Tester.from('8.55m'), 8550000);
+
+			equal ( Tester.to(3971883), '3.97m');
+			equal ( Tester.from('3.97m'), 3970000);
+
+			equal ( Tester.to(2296224), '2.30m');
+			equal ( Tester.from('2.30m'), 2300000);
+		})
+
 	</script>
